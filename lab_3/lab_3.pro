@@ -21,6 +21,7 @@ HEADERS += \
     CppPrintOperator.h \
     FactoryLang.h \
     Factoryes.h \
+    JavaClass.h \
     MethodUnit.h \
     PrintOperatorUnit.h \
     Unit.h
