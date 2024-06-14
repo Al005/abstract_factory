@@ -9,10 +9,12 @@ public:
 
     void add( const std::shared_ptr< Unit >& unit, Flags flags ) override{
         int accessModifier = PRIVATE;
-        if( flags < ACCESS_MODIFIERS.size() ) {
-            accessModifier = flags;
+        if (flags == PROTECTED) {
+            accessModifier = PROTECTED;
         }
-
+        else if (flags == PUBLIC) {
+            accessModifier = PUBLIC;
+        }
         m_fields[ accessModifier ].push_back( unit );
     }
 

@@ -26,7 +26,7 @@ public:
             }
 
             result += ACCESS_MODIFIERS[ i ] + ":\n";
-            for( const auto& f : m_fields[i] ) {  // Проверяем, какие еще есть объекты с данным модификатором
+            for( const auto& f : m_fields[i] ) {  // Проверяем, какие есть объекты с данным модификатором
                 result += f->compile( level + 1 );  // Если нашелся, вызываем метод compile данного объекта
             }
 

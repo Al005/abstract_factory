@@ -22,6 +22,8 @@ HEADERS += \
     FactoryLang.h \
     Factoryes.h \
     JavaClass.h \
+    JavaMethod.h \
+    JavaPrintOperator.h \
     MethodUnit.h \
     PrintOperatorUnit.h \
     Unit.h
