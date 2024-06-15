@@ -15,6 +15,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    CSharpClass.h \
     ClassUnit.h \
     CppClass.h \
     CppMethod.h \

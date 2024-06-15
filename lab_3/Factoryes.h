@@ -39,5 +39,20 @@ public:
         return std::make_shared< JavaPrintOperator >(text);
     }
 };
+/*
+class CSharpFactory : public FactoryLang {
+public:
+    std::shared_ptr< ClassUnit > createClass( const std::string& name ) const override {
+        return std::make_shared<CSharpClass>(name);
+    }
+
+    std::shared_ptr< MethodUnit > createMethod(const std::string& name, const std::string& returnType, Unit::Flags flags) const override {
+        return std::make_shared<CSharpMethod>(name, returnType, flags );
+    }
+
+    std::shared_ptr< PrintOperatorUnit > createPrintOperator( const std::string& text ) const override{
+        return std::make_shared< CSharpPrintOperator >(text);
+    }
+};*/
 
 #endif // FACTORYES_H
