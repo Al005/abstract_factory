@@ -7,7 +7,7 @@ class JavaMethod : public MethodUnit {
 public:
     JavaMethod(const std::string& name, const std::string& returnType, Flags flags) : MethodUnit (name, returnType, flags) {}
 
-    std::string compile( unsigned int level = 0 ) const {
+    std::string compile( unsigned int level = 0 ) const override {
         std::string result = generateShift( level );
         if ( m_flags & STATIC) {
             result += "static ";
@@ -22,7 +22,7 @@ public:
         result += m_name + "()";
         result += " {\n";
 
-        for( const auto& b : m_body ) { // вывод в result тела метода, которое будет состоять из ранее добавленных метода
+        for( const auto& b : m_body ) {
             result += b->compile( level + 1 );
         }
         result += generateShift( level ) + "}\n";

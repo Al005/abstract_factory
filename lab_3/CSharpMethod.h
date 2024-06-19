@@ -1,11 +1,11 @@
-#ifndef CPPMETHOD_H
-#define CPPMETHOD_H
+#ifndef CSHARPMETHOD_H
+#define CSHARPMETHOD_H
 
 #include "MethodUnit.h"
 
-class CppMethod : public MethodUnit {
+class CSharpMethod : public MethodUnit{
 public:
-    CppMethod(const std::string& name, const std::string& returnType, Flags flags) : MethodUnit (name, returnType, flags) {}
+    CSharpMethod(const std::string& name, const std::string& returnType, Flags flags) : MethodUnit (name, returnType, flags) {}
 
     std::string compile( unsigned int level = 0 ) const override {
         std::string result = generateShift( level );
@@ -26,9 +26,6 @@ public:
         result += generateShift( level ) + "}\n";
         return result;
     }
-
-
 };
 
-
-#endif // CPPMETHOD_H
+#endif // CSHARPMETHOD_H

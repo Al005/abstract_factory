@@ -16,6 +16,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     CSharpClass.h \
+    CSharpMethod.h \
+    CSharpPrintOperator.h \
     ClassUnit.h \
     CppClass.h \
     CppMethod.h \

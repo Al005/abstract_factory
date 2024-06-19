@@ -5,8 +5,7 @@
 
 class CppClass : public ClassUnit {
 public:
-    CppClass( const std::string& name ) : ClassUnit( name ) {
-    }
+    CppClass( const std::string& name ) : ClassUnit( name ) {}
 
     void add( const std::shared_ptr< Unit >& unit, Flags flags ) override{
         int accessModifier = PRIVATE;

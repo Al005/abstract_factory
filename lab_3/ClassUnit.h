@@ -9,7 +9,11 @@ public:
     enum AccessModifier {
         PUBLIC,
         PROTECTED,
-        PRIVATE
+        PRIVATE,
+        PRIVATE_PROTECTED,
+        FILE,
+        INTERNAL,
+        PROTECTED_INTERNAL
     };
     static const std::vector< std::string > ACCESS_MODIFIERS;
 
@@ -25,7 +29,7 @@ protected:
     std::vector< Fields > m_fields;
 };
 
-const std::vector< std::string > ClassUnit::ACCESS_MODIFIERS = { "public", "protected", "private" };
+const std::vector< std::string > ClassUnit::ACCESS_MODIFIERS = { "public", "protected", "private", "private protected", "file", "internal", "protectetd internal" };
 
 
 #endif // CLASSUNIT_H
