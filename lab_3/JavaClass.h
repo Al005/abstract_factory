@@ -5,7 +5,7 @@
 
 class JavaClass : public ClassUnit {
 public:
-    JavaClass( const std::string& name ) : ClassUnit( name ) {}
+    explicit JavaClass( const std::string& name ) : ClassUnit( name ) {}  // Исключаем неявный вызов конструктора
 
     void add( const std::shared_ptr< Unit >& unit, Flags flags ) override{
         int accessModifier = PRIVATE;
@@ -15,7 +15,7 @@ public:
         else if (flags == PUBLIC) {
             accessModifier = PUBLIC;
         }
-        m_fields[ accessModifier ].push_back( unit );
+        m_fields[ accessModifier ].push_back( unit );  // Добавляем объект в конец поля соответсвующего модификатора
     }
 
     std::string compile( unsigned int level = 0 ) const override {

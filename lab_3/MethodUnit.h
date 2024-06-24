@@ -21,10 +21,10 @@ public:
     }
 
 protected:
-    std::string m_name;
-    std::string m_returnType;
-    Flags m_flags;
-    std::vector< std::shared_ptr< Unit > > m_body;
+    std::string m_name;  // Имя метода
+    std::string m_returnType;  // Тип возвращаемого значения метода
+    Flags m_flags;  // Модификаторы метода
+    std::vector< std::shared_ptr< Unit > > m_body;  // Вектор в который мы добавляем методы
 };
 
 #endif // METHODUNIT_H

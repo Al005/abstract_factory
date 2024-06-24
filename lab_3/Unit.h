@@ -9,7 +9,7 @@
 
 class Unit {
 public:
-    using Flags = unsigned int;
+    using Flags = unsigned int;  // Создание псевдонима Flags для типа unsigned int
 
     virtual ~Unit() = default;
     virtual void add( const std::shared_ptr< Unit >& , Flags ) {

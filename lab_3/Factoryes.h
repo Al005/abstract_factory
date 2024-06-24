@@ -2,6 +2,7 @@
 #define FACTORYES_H
 
 #include "FactoryLang.h"
+
 #include "CppClass.h"
 #include "CppMethod.h"
 #include "CppPrintOperator.h"
@@ -9,6 +10,10 @@
 #include "JavaClass.h"
 #include "JavaMethod.h"
 #include "JavaPrintOperator.h"
+
+#include "CSharpClass.h"
+#include "CSharpMethod.h"
+#include "CSharpPrintOperator.h"
 
 class CppFactory : public FactoryLang {
 public:
@@ -25,6 +30,7 @@ public:
     }
 };
 
+
 class JavaFactory : public FactoryLang {
 public:
     std::shared_ptr< ClassUnit > createClass( const std::string& name ) const override {
@@ -39,7 +45,8 @@ public:
         return std::make_shared< JavaPrintOperator >(text);
     }
 };
-/*
+
+
 class CSharpFactory : public FactoryLang {
 public:
     std::shared_ptr< ClassUnit > createClass( const std::string& name ) const override {
@@ -53,6 +60,6 @@ public:
     std::shared_ptr< PrintOperatorUnit > createPrintOperator( const std::string& text ) const override{
         return std::make_shared< CSharpPrintOperator >(text);
     }
-};*/
+};
 
 #endif // FACTORYES_H
